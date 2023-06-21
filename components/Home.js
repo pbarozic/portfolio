@@ -115,7 +115,7 @@ function Home() {
             <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0" >
               Mes compétences
             </h1>
-            <div className="flex w-full flex-col lg:flex-row items-center justify-around">
+            <div className="flex w-full flex-col lg:flex-row lg:justify-start justify-around">
               <div className="flex flex-col lg:w-1/3 lg:px-5 items-center">
                 <h2 className="text-2xl lg:text-3xl font-semibold text-amber-500 mb-5" >
                   Backend
@@ -174,28 +174,82 @@ function Home() {
           </div>
 
         </section>
-        <section id="experience" className="pt-10 w-full min-h-screen flex flex-col lg:flex-row lg:items-start justify-center">
-          <div className="lg:w-1/2 h-full flex flex-col items-center">
+        <section id="experience" className="pt-10 w-screen min-h-screen flex flex-col lg:flex-row lg:items-start justify-center pb-3">
+          <div className="lg:w-5/12 w-full h-full flex flex-col items-center">
             <h2 className="text-3xl font-semibold text-teal-900 mb-5" >
-              EDUCATION
+              FORMATION
             </h2>
-          </div>
-          <div className="lg:w-1/2 h-full flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-teal-900 mb-5" >
-              EXPERIENCES
-            </h2>
-              <Experience date="Août  2021 -  Jui 2022"
-               job="Data Analyst" 
-               company="Effilab"
-                description="Développement de scripts Python impactant l'ensemble du parc de clients pour répondre à des problématiques Business. Création d'un algorithme de gestion des dépenses publicitaires sur Google et Bing."  
-               skills={['Python', 'NumPy', 'Panda','postgreSQL', 'Metabase', 'SQLAlchemy']}
+            <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
+    <li className="flex justify-start w-full">
+      <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+            <Experience date="Mars 2023 -  Juin 2023"
+               job="Bootcamp Développeur Fullstack" 
+               company="La Capsule"
+               intro="Coding Bootcamp de 10 semaines - Développeur web et mobile Fullstack JavaScript"
+               description={[
+                "Conception et prototypage d’applications web et mobile",                
+                "Programmation Backend et Frontend",
+                "Base de données : MongoDB",
+                "Workflow : Git / Github"
+              ]}
+               skills={['React', 'React Native','HTML 5' ,'CSS' , 'Node.js','Express', 'Redux', 'MongoDB', 'Github']}
                 />
-              <Experience date="Août  2021 -  Jui 2022"
-               job="Business Analyst SEA" 
-               company="Effilab"
-                description="Développement de scripts Python impactant l'ensemble du parc de clients pour répondre à des problématiques Business. Création d'un algorithme de gestion des dépenses publicitaires sur Google et Bing."  
-               skills={['postgreSQL', 'Metabase', 'SEA']}
-                />          </div>
+                    </li>
+                    <li className="flex items-start">
+                    <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+            <Experience 
+            date="Sept 2013 -  Fév 2018"
+               job="Master 2 en Management" 
+               company="Toulouse Business School"
+               intro="Programme grande école - Spécialisation Management international"
+               description={[
+                "Activités et associations:  Welcome Team - Association en charge de l'accueil des étudiants étrangers à TBS.",
+                "Semestre à l'étranger : Arizona State University à Phoenix, USA",                
+           
+              ]}
+
+                />
+                    </li>
+                    </ul>
+
+          </div>
+          <div className="lg:w-5/12 h-full flex flex-col items-center">
+            <h2 className="text-3xl font-semibold text-teal-900 mb-5" >
+              EXPÉRIENCES
+            </h2>
+            <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
+    <li className="flex justify-start">
+      <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+      <Experience
+        date="Juil 2021 - Juil 2022"
+        job="Data Analyst"
+        company="Effilab"
+        description={[
+          "Développement de scripts Python pour répondre à des problématiques Business.",
+          "Création d'un algorithme de gestion des dépenses publicitaires sur Google Ads.",
+          "Automatisation de process opérationnels via des scripts Python.",
+          "Création de dashboards via requêtes SQL (PostgreSQL, Metabase)"
+        ]}
+        skills={['Python', 'NumPy', 'Pandas', 'postgreSQL', 'Metabase', 'SQLAlchemy']}
+      />
+    </li>
+    <li className="flex items-start">
+    <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+      <Experience
+        date="Juin 2019 - Juillet 2021"
+        job="Business Analyst SEA"
+        company="Effilab"
+        description={[
+          "Génération de leads qualifiés via des campagnes d'acquisition sur les réseaux de recherche (Google Ads, Bing Ads) pour un portefeuille de 1500 clients PMEs-TPEs, et pour le site Ootravaux.fr.",
+          "Création de dashboards via requêtes SQL (PostgreSQL, Metabase) de suivi de la performance. Analyse et optimisation des campagnes d'acquisition.",
+          "Fort investissement dans le recrutement et la formation initiale et continue des différentes équipes, rédaction de supports internes de partage de connaissances."
+        ]}
+        skills={['postgreSQL', 'Metabase', 'SEA']}
+      />
+    </li>
+  </ul>
+                
+                     </div>
 
 
         </section>
