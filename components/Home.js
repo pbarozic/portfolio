@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+
 import Experience from './Experiences';
 import '@fontsource/poppins';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 
 function Home() {
   const [activeSection, setActiveSection] = useState('');
@@ -69,8 +72,15 @@ function Home() {
               </Link>
             </div>
             <div className="flex">
-              <a href="#about" className="text-gray-300 hover:bg-teal-800 px-3 py-2 rounded-md text-sm font-medium">FR</a>
-              <a href="#experience" className="text-gray-300 hover:bg-teal-800 px-3 py-2 rounded-md text-sm font-medium">EN</a>
+            <div className="flex">
+          <a href="https://github.com/pbarozic" target="_blank" rel="noopener noreferrer">
+  <FaGithub className="text-gray-300 hover:text-teal-800 mr-5" size={32} />
+</a>
+
+<a href="https://www.linkedin.com/in/pierre-baptiste-rozic-6098ab90" target="_blank" rel="noopener noreferrer">
+  <FaLinkedin className="text-gray-300 hover:text-teal-800" size={32}/>
+</a>
+</div>
             </div>
           </div>
         </div>
@@ -78,7 +88,7 @@ function Home() {
       <main className="min-h-screen  overflow-x-hidden w-screen pt-16">
         <section id="about" className="w-screen min-h-screen bg-gradient-to-b from-lime-200 to-amber-200 flex sm:flex-col flex-col items-center">
           <div className="w-screen lg:h-9/12 flex lg:flex-row flex-col justify-center">
-            <div className="lg:w-2/5 sm:w-full lg:h-full flex flex-col lg:items-end md:items-start items-center justify-start lg:p-20 pt-10">
+            <div className="lg:w-2/5 sm:w-full lg:h-full flex flex-col lg:items-end md:items-start items-center justify-start lg:px-20 lg:pt-20 lg:pb-10 pt-10">
               <div className="rounded-t-full overflow-hidden w-72 h-72">
                 <Image src="/images/profile-pic.jpeg" alt="Photo profil" width="400" height="400" />
 
@@ -107,12 +117,17 @@ function Home() {
               <p className="text-1xl  lg:w-10/12  font-medium text-justify text-teal-900">
                 Avec ma solide base en analyse de données et ma maîtrise des langages de programmation (Node.js, React.js), je suis prêt à relever de nouveaux défis en mettant mes compétences au service de projets passionnants.
               </p>
+              <a href="https://drive.google.com/file/d/1InoDEZ8luldFn2yOM4p6l7dXLX_BVywg/view?usp=sharing" 
+              target="_blank" 
+              className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2">
+                Mon CV
+                </a>
 
             </div>
           </div>
 
-          <div className="w-full flex flex-col items-center pb-20" >
-            <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0" >
+          <div className="w-full flex flex-col items-center pb-20 mt-5" >
+            <h1 className="text-3xl lg:text-4xl font-semibold text-teal-900 mb-5 lg:mt-0" >
               Mes compétences
             </h1>
             <div className="flex w-full flex-col lg:flex-row lg:justify-start justify-around">
@@ -254,8 +269,16 @@ function Home() {
 
         </section>
         <section id="projects" className="w-full h-screen bg-gradient-to-b from-amber-200 to-lime-200 flex flex-col items-center">
-          {/* Projects section content */}
-        </section>
+        <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0 pt-5" >
+              Mes Projets
+            </h1>       
+            {/* <div className="group h-4/6 w-5/6 flex bg-teal-900 cursor-pointer rounded-2xl hover:bg-teal-800 mb-5 p-3">
+          <p>
+         Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France. 
+         </p>
+          </div> */}
+          
+             </section>
       </main>
     </div>
   );
