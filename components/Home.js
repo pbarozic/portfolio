@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import Footer from './Footer';
 
 import Experience from './Experiences';
 import '@fontsource/poppins';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 
@@ -72,15 +73,15 @@ function Home() {
               </Link>
             </div>
             <div className="flex">
-            <div className="flex">
-          <a href="https://github.com/pbarozic" target="_blank" rel="noopener noreferrer">
-  <FaGithub className="text-gray-300 hover:text-teal-800 mr-5" size={32} />
-</a>
+              <div className="flex">
+                <a href="https://github.com/pbarozic" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-gray-300 hover:text-teal-800 mr-5" size={32} />
+                </a>
 
-<a href="https://www.linkedin.com/in/pierre-baptiste-rozic-6098ab90" target="_blank" rel="noopener noreferrer">
-  <FaLinkedin className="text-gray-300 hover:text-teal-800" size={32}/>
-</a>
-</div>
+                <a href="https://www.linkedin.com/in/pierre-baptiste-rozic-6098ab90" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="text-gray-300 hover:text-teal-800" size={32} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -93,11 +94,22 @@ function Home() {
                 <Image src="/images/profile-pic.jpeg" alt="Photo profil" width="400" height="400" />
 
               </div>
-              <div className="w-72 h-16 bg-teal-900 flex items-center justify-center">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lime-200 h-8 w-8" />
-                <h1 className="text-xl font-semibold text-lime-200 ml-5" >
-                  Paris, France
-                </h1>
+              <div className="w-72 h-24 bg-teal-900 flex flex-col items-start justify-around pl-2">
+                <div className="flex" >
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lime-200 h-6 w-6" />
+                  <h1 className="text-base font-semibold text-lime-200 ml-5" >
+                    Paris, France
+                  </h1>
+                </div>
+
+
+                <div className="flex" >
+                  <FontAwesomeIcon icon={faEnvelope} className="text-lime-200 h-6 w-6" />
+
+                  <a href="mailto:pierrebaptiste.rozic@gmail.com" className="tracking-tight	text-base font-semibold hover:text-white text-lime-200 ml-5">
+                    pierrebaptiste.rozic@gmail.com
+                  </a>
+                </div>
               </div>
 
             </div>
@@ -117,13 +129,17 @@ function Home() {
               <p className="text-1xl  lg:w-10/12  font-medium text-justify text-teal-900">
                 Avec ma solide base en analyse de données et ma maîtrise des langages de programmation (Node.js, React.js), je suis prêt à relever de nouveaux défis en mettant mes compétences au service de projets passionnants.
               </p>
-              <a href="https://drive.google.com/file/d/1InoDEZ8luldFn2yOM4p6l7dXLX_BVywg/view?usp=sharing" 
-              target="_blank" 
-              className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2">
-                Mon CV
+              <div className="flex lg:justify-start justify-center">
+                <a
+                  href="https://drive.google.com/file/d/1InoDEZ8luldFn2yOM4p6l7dXLX_BVywg/view?usp=sharing"
+                  target="_blank"
+                  className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                >
+                  Mon CV
                 </a>
-
+              </div>
             </div>
+
           </div>
 
           <div className="w-full flex flex-col items-center pb-20 mt-5" >
@@ -195,37 +211,37 @@ function Home() {
               FORMATION
             </h2>
             <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
-    <li className="flex justify-start w-full">
-      <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
-            <Experience date="Mars 2023 -  Juin 2023"
-               job="Bootcamp Développeur Fullstack" 
-               company="La Capsule"
-               intro="Coding Bootcamp de 10 semaines - Développeur web et mobile Fullstack JavaScript"
-               description={[
-                "Conception et prototypage d’applications web et mobile",                
-                "Programmation Backend et Frontend",
-                "Base de données : MongoDB",
-                "Workflow : Git / Github"
-              ]}
-               skills={['React', 'React Native','HTML 5' ,'CSS' , 'Node.js','Express', 'Redux', 'MongoDB', 'Github']}
+              <li className="flex justify-start w-full">
+                <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+                <Experience date="Mars 2023 -  Juin 2023"
+                  job="Bootcamp Développeur Fullstack"
+                  company="La Capsule"
+                  intro="Coding Bootcamp de 10 semaines - Développeur web et mobile Fullstack JavaScript"
+                  description={[
+                    "Conception et prototypage d’applications web et mobile",
+                    "Programmation Backend et Frontend",
+                    "Base de données : MongoDB",
+                    "Workflow : Git / Github"
+                  ]}
+                  skills={['React', 'React Native', 'HTML 5', 'CSS', 'Node.js', 'Express', 'Redux', 'MongoDB', 'Github']}
                 />
-                    </li>
-                    <li className="flex items-start">
-                    <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
-            <Experience 
-            date="Sept 2013 -  Fév 2018"
-               job="Master 2 en Management" 
-               company="Toulouse Business School"
-               intro="Programme grande école - Spécialisation Management international"
-               description={[
-                "Activités et associations:  Welcome Team - Association en charge de l'accueil des étudiants étrangers à TBS.",
-                "Semestre à l'étranger : Arizona State University à Phoenix, USA",                
-           
-              ]}
+              </li>
+              <li className="flex items-start">
+                <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+                <Experience
+                  date="Sept 2013 -  Fév 2018"
+                  job="Master 2 en Management"
+                  company="Toulouse Business School"
+                  intro="Programme grande école - Spécialisation Management international"
+                  description={[
+                    "Activités et associations:  Welcome Team - Association en charge de l'accueil des étudiants étrangers à TBS.",
+                    "Semestre à l'étranger : Arizona State University à Phoenix, USA",
+
+                  ]}
 
                 />
-                    </li>
-                    </ul>
+              </li>
+            </ul>
 
           </div>
           <div className="lg:w-5/12 h-full flex flex-col items-center">
@@ -233,53 +249,147 @@ function Home() {
               EXPÉRIENCES
             </h2>
             <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
-    <li className="flex justify-start">
-      <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
-      <Experience
-        date="Juil 2021 - Juil 2022"
-        job="Data Analyst"
-        company="Effilab"
-        description={[
-          "Développement de scripts Python pour répondre à des problématiques Business.",
-          "Création d'un algorithme de gestion des dépenses publicitaires sur Google Ads.",
-          "Automatisation de process opérationnels via des scripts Python.",
-          "Création de dashboards via requêtes SQL (PostgreSQL, Metabase)"
-        ]}
-        skills={['Python', 'NumPy', 'Pandas', 'postgreSQL', 'Metabase', 'SQLAlchemy']}
-      />
-    </li>
-    <li className="flex items-start">
-    <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
-      <Experience
-        date="Juin 2019 - Juillet 2021"
-        job="Business Analyst SEA"
-        company="Effilab"
-        description={[
-          "Génération de leads qualifiés via des campagnes d'acquisition sur les réseaux de recherche (Google Ads, Bing Ads) pour un portefeuille de 1500 clients PMEs-TPEs, et pour le site Ootravaux.fr.",
-          "Création de dashboards via requêtes SQL (PostgreSQL, Metabase) de suivi de la performance. Analyse et optimisation des campagnes d'acquisition.",
-          "Fort investissement dans le recrutement et la formation initiale et continue des différentes équipes, rédaction de supports internes de partage de connaissances."
-        ]}
-        skills={['postgreSQL', 'Metabase', 'SEA']}
-      />
-    </li>
-  </ul>
-                
-                     </div>
+              <li className="flex justify-start">
+                <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+                <Experience
+                  date="Juil 2021 - Juil 2022"
+                  job="Data Analyst"
+                  company="Effilab"
+                  description={[
+                    "Développement de scripts Python pour répondre à des problématiques Business.",
+                    "Création d'un algorithme de gestion des dépenses publicitaires sur Google Ads.",
+                    "Automatisation de process opérationnels via des scripts Python.",
+                    "Création de dashboards via requêtes SQL (PostgreSQL, Metabase)"
+                  ]}
+                  skills={['Python', 'NumPy', 'Pandas', 'postgreSQL', 'Metabase', 'SQLAlchemy']}
+                />
+              </li>
+              <li className="flex items-start">
+                <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
+                <Experience
+                  date="Juin 2019 - Juillet 2021"
+                  job="Business Analyst SEA"
+                  company="Effilab"
+                  description={[
+                    "Génération de leads qualifiés via des campagnes d'acquisition sur les réseaux de recherche (Google Ads, Bing Ads) pour un portefeuille de 1500 clients PMEs-TPEs, et pour le site Ootravaux.fr.",
+                    "Création de dashboards via requêtes SQL (PostgreSQL, Metabase) de suivi de la performance. Analyse et optimisation des campagnes d'acquisition.",
+                    "Fort investissement dans le recrutement et la formation initiale et continue des différentes équipes, rédaction de supports internes de partage de connaissances."
+                  ]}
+                  skills={['postgreSQL', 'Metabase', 'SEA']}
+                />
+              </li>
+            </ul>
+
+          </div>
 
 
         </section>
-        <section id="projects" className="w-full h-screen bg-gradient-to-b from-amber-200 to-lime-200 flex flex-col items-center">
-        <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0 pt-5" >
-              Mes Projets
-            </h1>       
-            {/* <div className="group h-4/6 w-5/6 flex bg-teal-900 cursor-pointer rounded-2xl hover:bg-teal-800 mb-5 p-3">
-          <p>
-         Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France. 
-         </p>
-          </div> */}
-          
-             </section>
+        <section id="projects" className="w-full min-h-screen lg:h-72 bg-gradient-to-b from-amber-200 to-lime-200 flex flex-col items-center">
+          <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0 pt-5" >
+            Mes Projets
+          </h1>
+          <div className="group lg:h-4/6 h-full w-5/6 flex lg:flex-row flex-col bg-teal-900 rounded-2xl hover:bg-teal-800 mb-5 py-3">
+            <div className="lg:w-1/2 h-full flex flex-col justify-start items-center">
+              <div className="overflow-hidden">
+
+                <Image src="/images/logo.png"
+                  alt="Photo profil"
+                  objectFit="contain"
+                  width={150}
+                  height={150}
+                />
+              </div>
+
+              <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3">
+                Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France.
+                Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer ce Minimum Viable product en 10 jours.
+              </p>
+              <div className="w-5/6 justify-start items-center">
+                <div className="flex items-center">
+              <p className="mr-5 text-white font-bold text-xl">
+                Backend:
+              </p>
+              <a href="https://github.com/michaelrasolo/backend-gametime" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-gray-300 hover:text-white mr-5" size={24} />
+                </a>
+                </div>
+              <div className="flex">
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Node.js                            </p>
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Express                          </p>
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                MongoDB                         </p>
+             
+                </div>
+                </div>
+                <div className="w-5/6 justify-start items-center">
+                <div className="flex items-center">
+
+                <p className="mr-5 text-white font-bold text-xl">
+                Frontend:
+              </p>
+              <a href="https://github.com/michaelrasolo/gametime-front" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-gray-300 hover:text-white mr-5" size={24} />
+                </a>
+              </div>
+              <div className="flex">
+
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                React Native                            </p>
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Expo                         </p>
+              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Redux                        </p>
+       
+                </div>
+
+                </div>
+
+            </div>
+            <div className="lg:w-1/2 h-full flex flex-col pb-3 items-center">
+              <div className="flex">
+                <Image src="/images/screen search.png"
+                  alt="screen appli search"
+                  objectFit="contain"
+
+                  width={900}
+                  height={1800}
+                />
+
+                <Image src="/images/screen map.png"
+                  alt="screen appli map"
+                  objectFit="contain"
+
+                  width={900}
+                  height={1800}
+                />
+
+                <Image src="/images/screen chat.png"
+                  alt="screen appli chat"
+                  objectFit="contain"
+
+                  width={900}
+                  height={1800}
+                />
+              </div>
+              <div>
+                <a
+                  href="https://drive.google.com/file/d/1LtxMaIspYyy1IxkUKa4b7Xka9DObgOIy/view?usp=sharing"
+                  target="_blank"
+                  className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                >
+                  Voir la démo
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
