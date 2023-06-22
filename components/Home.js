@@ -34,13 +34,21 @@ function Home() {
   }, []);
 
   return (
-    <div className="font-poppins w-screen">
+    <div className="w-screen font-source-sans-3">
       <nav className="bg-teal-900 fixed w-full z-10 top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="ml-4">
-                <h1 className="text-xl font-semibold text-white">Pierre-Baptiste Rozic</h1>
+              <Link
+                to="about"
+                className={`text-xl font-semibold hover:bg-teal-800 text-white px-3 py-2 cursor-pointer rounded-md ${activeSection === 'about' ? 'active-link font-bold text-white' : ''}`}
+                spy={true}
+                duration={100}
+                onSetActive={() => setActiveSection('about')}
+              >
+               Pierre-Baptiste Rozic
+                </Link>
               </div>
             </div>
             <div className="hidden sm:flex">
@@ -58,6 +66,7 @@ function Home() {
                 className={`text-gray-300 hover:bg-teal-800 px-3 py-2 cursor-pointer rounded-md ${activeSection === 'experience' ? 'active-link font-bold text-white' : ''}`}
                 spy={true}
                 duration={100}
+                offset={-50}
                 onSetActive={() => setActiveSection('experience')}
               >
                 Expérience
@@ -67,6 +76,8 @@ function Home() {
                 className={`text-gray-300 hover:bg-teal-800 px-3 py-2 cursor-pointer rounded-md ${activeSection === 'projects' ? 'active-link font-bold text-white' : ''}`}
                 spy={true}
                 duration={100}
+                offset={-50}
+
                 onSetActive={() => setActiveSection('projects')}
               >
                 Projets
@@ -87,37 +98,43 @@ function Home() {
         </div>
       </nav>
       <main className="min-h-screen  overflow-x-hidden w-screen pt-16">
-        <section id="about" className="w-screen min-h-screen bg-gradient-to-b from-lime-200 to-amber-200 flex sm:flex-col flex-col items-center">
+        <section id="about" className="w-screen min-h-screen 
+bg-teal-50	
+         flex sm:flex-col flex-col items-center">
+          {/* bg-gradient-to-b from-teal-200 to-amber-100 */}
           <div className="w-screen lg:h-9/12 flex lg:flex-row flex-col justify-center">
             <div className="lg:w-2/5 sm:w-full lg:h-full flex flex-col lg:items-end md:items-start items-center justify-start lg:px-20 lg:pt-20 lg:pb-10 pt-10">
-              <div className="rounded-t-full overflow-hidden w-72 h-72">
+              <div className="rounded-t-full overflow-hidden w-72 h-72 border-teal-900 border-2">
                 <Image src="/images/profile-pic.jpeg" alt="Photo profil" width="400" height="400" />
 
               </div>
-              <div className="w-72 h-24 bg-teal-900 flex flex-col items-start justify-around pl-2">
+              <div className="w-72 h-12 bg-teal-900 flex flex-col items-start justify-around pl-2">
                 <div className="flex" >
-                  <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lime-200 h-6 w-6" />
-                  <h1 className="text-base font-semibold text-lime-200 ml-5" >
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="text-teal-100 h-6 w-6" />
+                  <h1 className="text-base font-semibold text-teal-100 ml-5" >
                     Paris, France
                   </h1>
                 </div>
 
 
-                <div className="flex" >
-                  <FontAwesomeIcon icon={faEnvelope} className="text-lime-200 h-6 w-6" />
+              
+              </div>
+              <div className="w-72 h-12 border-teal-900 border-2 flex flex-col items-start justify-around pl-2">
 
-                  <a href="mailto:pierrebaptiste.rozic@gmail.com" className="tracking-tight	text-base font-semibold hover:text-white text-lime-200 ml-5">
+              <div className="flex" >
+                  <FontAwesomeIcon icon={faEnvelope} className="text-teal-900 h-6 w-6" />
+
+                  <a href="mailto:pierrebaptiste.rozic@gmail.com" className="tracking-tight	text-base font-semibold hover:text-teal-700 text-teal-900 ml-5">
                     pierrebaptiste.rozic@gmail.com
                   </a>
                 </div>
-              </div>
-
+                </div>
             </div>
-            <div className="lg:w-3/5 w-full pt-20 lg:px-20 px-5 h-full flex flex-col justify-start">
+            <div className="lg:w-3/5 w-full lg:pt-20 pt-10 lg:px-20 px-5 h-full flex flex-col justify-start">
               <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900	" >
                 Pierre-Baptiste Rozic
               </h1>
-              <h2 className="text-2xl lg:text-3xl font-semibold text-amber-500 mt-5" >
+              <h2 className="text-2xl lg:text-3xl font-semibold text-orange-400 mt-5" >
                 Développeur Fullstack Junior
               </h2>
               <p className="text-1xl lg:w-10/12 font-medium text-justify mt-10 text-teal-900 mb-3">
@@ -133,7 +150,7 @@ function Home() {
                 <a
                   href="https://drive.google.com/file/d/1InoDEZ8luldFn2yOM4p6l7dXLX_BVywg/view?usp=sharing"
                   target="_blank"
-                  className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                  className="bg-orange-400 hover:bg-orange-500 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
                 >
                   Mon CV
                 </a>
@@ -148,7 +165,7 @@ function Home() {
             </h1>
             <div className="flex w-full flex-col lg:flex-row lg:justify-start justify-around">
               <div className="flex flex-col lg:w-1/3 lg:px-5 items-center">
-                <h2 className="text-2xl lg:text-3xl font-semibold text-amber-500 mb-5" >
+                <h2 className="text-2xl lg:text-3xl font-semibold text-orange-400 mb-5" >
                   Backend
                 </h2>
                 <div className="flex lg:flex-wrap justify-center">
@@ -159,7 +176,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col lg:w-1/3 lg:px-5 items-center">
-                <h2 className="text-2xl lg:text-3xl  font-semibold text-amber-500 mb-5" >
+                <h2 className="text-2xl lg:text-3xl  font-semibold text-orange-400 mb-5" >
                   Frontend
                 </h2>
                 <div className="flex flex-wrap justify-center">
@@ -180,7 +197,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col lg:w-1/3 lg:px-5  items-center">
-                <h2 className="text-2xl lg:text-3xl  font-semibold text-amber-500  mb-5" >
+                <h2 className="text-2xl lg:text-3xl  font-semibold text-orange-400  mb-5" >
                   Data
                 </h2>
                 <div className="flex flex-wrap justify-center">
@@ -207,9 +224,13 @@ function Home() {
         </section>
         <section id="experience" className="pt-10 w-screen min-h-screen flex flex-col lg:flex-row lg:items-start justify-center pb-3">
           <div className="lg:w-5/12 w-full h-full flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-teal-900 mb-5" >
+          <div className="flex flex-col items-center mb-5">
+            <h2 className="text-3xl font-semibold text-teal-900" >
               FORMATION
             </h2>
+            <hr className="w-1/2 bg-orange-400 h-2 mt-2" />
+            </div>
+
             <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
               <li className="flex justify-start w-full">
                 <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
@@ -245,9 +266,13 @@ function Home() {
 
           </div>
           <div className="lg:w-5/12 h-full flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-teal-900 mb-5" >
+          <div className="flex flex-col items-center mb-5">
+            <h2 className="text-3xl font-semibold text-teal-900" >
               EXPÉRIENCES
             </h2>
+            <hr className="w-1/2 bg-orange-400 h-2 mt-2" />
+            </div>
+
             <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
               <li className="flex justify-start">
                 <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
@@ -283,11 +308,15 @@ function Home() {
           </div>
 
 
-        </section>
-        <section id="projects" className="w-full min-h-screen lg:h-72 bg-gradient-to-b from-amber-200 to-lime-200 flex flex-col items-center">
-          <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900 mb-5 mt-5 lg:mt-0 pt-5" >
-            Mes Projets
+        </section> 
+        <section id="projects" className="w-full min-h-screen lg:h-72 bg-teal-50 flex flex-col items-center">
+        <div className="flex flex-col items-center mb-5">
+        <h1 className="text-4xl lg:text-3xl font-semibold text-teal-900  mt-5 lg:mt-0 pt-5" >
+           PROJETS
           </h1>
+          <hr className="w-1/2 bg-orange-400 h-2 mt-2" />
+
+          </div>
           <div className="group lg:h-4/6 h-full w-5/6 flex lg:flex-row flex-col bg-teal-900 rounded-2xl hover:bg-teal-800 mb-5 py-3">
             <div className="lg:w-1/2 h-full flex flex-col justify-start items-center">
               <div className="overflow-hidden">
@@ -302,7 +331,7 @@ function Home() {
 
               <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3 lg:px-0 px-4">
                 Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France.
-                Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer ce Minimum Viable product en 10 jours.
+                Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer un Minimum Viable Product (MVP) en 10 jours.
               </p>
               <div className="w-5/6 justify-start items-center">
                 <div className="flex items-center">
@@ -314,11 +343,11 @@ function Home() {
                 </a>
                 </div>
               <div className="flex">
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 Node.js                            </p>
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 Express                          </p>
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 MongoDB                         </p>
              
                 </div>
@@ -335,11 +364,11 @@ function Home() {
               </div>
               <div className="flex">
 
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 React Native                            </p>
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 Expo                         </p>
-              <p className="bg-amber-500 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
                 Redux                        </p>
        
                 </div>
@@ -377,7 +406,7 @@ function Home() {
                 <a
                   href="https://drive.google.com/file/d/1LtxMaIspYyy1IxkUKa4b7Xka9DObgOIy/view?usp=sharing"
                   target="_blank"
-                  className="bg-amber-500 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                  className="bg-orange-400 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
                 >
                   Voir la démo
                 </a>
