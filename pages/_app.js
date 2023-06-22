@@ -6,6 +6,7 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Pierre-Baptiste Rozic</title>
+        
       </Head>
       <Component {...pageProps} />
     </>

@@ -34,7 +34,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-screen font-source-sans-3">
+    <div className="w-screen">
       <nav className="bg-teal-900 fixed w-full z-10 top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -103,7 +103,7 @@ bg-teal-50
          flex sm:flex-col flex-col items-center">
           {/* bg-gradient-to-b from-teal-200 to-amber-100 */}
           <div className="w-screen lg:h-9/12 flex lg:flex-row flex-col justify-center">
-            <div className="lg:w-2/5 sm:w-full lg:h-full flex flex-col lg:items-end md:items-start items-center justify-start lg:px-20 lg:pt-20 lg:pb-10 pt-10">
+            <div className="lg:w-2/5 sm:w-full lg:h-full flex flex-col lg:items-end items-center justify-start lg:px-20 lg:pt-20 lg:pb-10 pt-10">
               <div className="rounded-t-full overflow-hidden w-72 h-72 border-teal-900 border-2">
                 <Image src="/images/profile-pic.jpeg" alt="Photo profil" width="400" height="400" />
 
@@ -130,8 +130,8 @@ bg-teal-50
                 </div>
                 </div>
             </div>
-            <div className="lg:w-3/5 w-full lg:pt-20 pt-10 lg:px-20 px-5 h-full flex flex-col justify-start">
-              <h1 className="text-4xl lg:text-5xl font-semibold text-teal-900	" >
+            <div className="lg:w-3/5 w-full lg:pt-20 pt-10 lg:px-20 px-5 h-full flex flex-col lg:items-start items-center">
+              <h1 className="text-4xl lg:text-5xl font-semibold font-source-sans-3 text-teal-900	" >
                 Pierre-Baptiste Rozic
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-orange-400 mt-5" >
@@ -146,11 +146,11 @@ bg-teal-50
               <p className="text-1xl  lg:w-10/12  font-medium text-justify text-teal-900">
                 Avec ma solide base en analyse de données et ma maîtrise des langages de programmation (Node.js, React.js), je suis prêt à relever de nouveaux défis en mettant mes compétences au service de projets passionnants.
               </p>
-              <div className="flex lg:justify-start justify-center">
+              <div className="flex  lg:justify-start justify-center">
                 <a
                   href="https://drive.google.com/file/d/1InoDEZ8luldFn2yOM4p6l7dXLX_BVywg/view?usp=sharing"
                   target="_blank"
-                  className="bg-orange-400 hover:bg-orange-500 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                  className="bg-orange-400 w-72 hover:bg-orange-500 w-1/4 text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
                 >
                   Mon CV
                 </a>
@@ -160,10 +160,13 @@ bg-teal-50
           </div>
 
           <div className="w-full flex flex-col items-center pb-20 mt-5" >
-            <h1 className="text-3xl lg:text-4xl font-semibold text-teal-900 mb-5 lg:mt-0" >
-              Mes compétences
-            </h1>
-            <div className="flex w-full flex-col lg:flex-row lg:justify-start justify-around">
+          <div className="flex flex-col items-center mb-5">
+            <h2 className="text-3xl font-semibold text-teal-900" >
+            {/* <h1 className="text-3xl lg:text-4xl font-semibold text-teal-900 mb-5 lg:mt-0" > */}
+            COMPÉTENCES
+            </h2>
+            <hr className="w-1/2 bg-orange-400 h-2 mt-2" />
+            </div>            <div className="flex w-full flex-col lg:flex-row lg:justify-start justify-around">
               <div className="flex flex-col lg:w-1/3 lg:px-5 items-center">
                 <h2 className="text-2xl lg:text-3xl font-semibold text-orange-400 mb-5" >
                   Backend

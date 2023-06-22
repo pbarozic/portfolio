@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
-  font-family: 'Source Sans 3';
-  src: url('/fonts/SourceSans3-Regular.ttf') format('truetype');
+  font-family: 'source-sans-3';
+  src: url('/font/SourceSans3-Regular.ttf') format('truetype');
 }
 
 body {
