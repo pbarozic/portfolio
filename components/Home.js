@@ -300,7 +300,7 @@ function Home() {
                 />
               </div>
 
-              <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3">
+              <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3 lg:px-0 px-4">
                 Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France.
                 Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer ce Minimum Viable product en 10 jours.
               </p>
