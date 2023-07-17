@@ -1,32 +1,4 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+3&family=Titillium+Web:wght@400;700&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@font-face {
-  font-family: 'source-sans-3';
-  src: url('/font/SourceSans3-Regular.ttf') format('truetype');
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.smooth-scroll {
-  transition: color 0.3s ease-in-out;
-}
-
-.smooth-scroll:hover {
-  color: gray; /* Couleur de texte au survol */
-}

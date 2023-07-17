@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import Footer from './Footer';
 
 import Experience from './Experiences';
-import '@fontsource/poppins';
+import '@fontsource/roboto';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -34,7 +34,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-screen">
+    <div className="w-screen font-abc">
       <nav className="bg-teal-900 fixed w-full z-10 top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -42,7 +42,7 @@ function Home() {
               <div className="ml-4">
               <Link
                 to="about"
-                className={`text-xl font-semibold hover:bg-teal-800 text-white px-3 py-2 cursor-pointer rounded-md ${activeSection === 'about' ? 'active-link font-bold text-white' : ''}`}
+                className={`text-xl font-semibold  hover:bg-teal-800 text-white px-3 py-2 cursor-pointer rounded-md ${activeSection === 'about' ? 'active-link font-bold text-white' : ''}`}
                 spy={true}
                 duration={100}
                 onSetActive={() => setActiveSection('about')}

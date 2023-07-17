@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sourcesans3: ['source-sans-3', 'sans-serif'],
+      abc: ["Titillium Web", "sans-serif"],
     },
   },
   plugins: [],
