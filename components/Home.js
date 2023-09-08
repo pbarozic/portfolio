@@ -250,7 +250,7 @@ bg-teal-50
                   skills={['React', 'React Native', 'HTML 5', 'CSS', 'Node.js', 'Express', 'Redux', 'MongoDB', 'Github']}
                 />
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start w-full">
                 <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
                 <Experience
                   date="Sept 2013 -  Fév 2018"
@@ -277,7 +277,7 @@ bg-teal-50
             </div>
 
             <ul className="space-y-4 pl-4 border-l-2 flex flex-col items-start border-gray-500 lg:ml-0 ml-4">
-              <li className="flex justify-start">
+              <li className="flex justify-start w-full">
                 <span className="w-7 h-7 bg-gray-500 rounded-full mt-1 ml-[-1.9rem]"></span>
                 <Experience
                   date="Juil 2021 - Juil 2022"
@@ -312,36 +312,59 @@ bg-teal-50
 
 
         </section> 
-        <section id="projects" className="w-full min-h-screen lg:h-72 bg-teal-50 flex flex-col items-center">
-        <div className="flex flex-col items-center mb-5">
+        <section id="projects" className="w-full min-h-screen lg:pb-12 bg-teal-50 flex flex-col items-center">
+
+        <div className="flex h-full flex-col items-center mb-5">
         <h1 className="text-4xl lg:text-3xl font-semibold text-teal-900  mt-5 lg:mt-0 pt-5" >
            PROJETS
           </h1>
           <hr className="w-1/2 bg-orange-400 h-2 mt-2" />
-
           </div>
-          <div className="group lg:h-4/6 h-full w-5/6 flex lg:flex-row flex-col bg-teal-900 rounded-2xl hover:bg-teal-800 mb-5 py-3">
-            <div className="lg:w-1/2 h-full flex flex-col justify-start items-center">
-              <div className="overflow-hidden">
 
-                <Image src="/images/logo.png"
-                  alt="Photo profil"
+          <div className="group h-screen lg:h-1/2 w-5/6 flex lg:flex-row flex-col bg-teal-900 rounded-2xl hover:bg-teal-800 mb-5">
+            <div className="lg:w-1/2 h-screen lg:h-1/2  flex flex-col justify-start items-center pb-3 mt-4">
+              <div className="h-1/3 w-1/3 mb-4">
+                <Image src="/images/logo-pepi.png"
+                  alt="Photo logo appli"
                   objectFit="contain"
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                 />
               </div>
 
               <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3 lg:px-0 px-4">
-                Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France.
-                Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer un Minimum Viable Product (MVP) en 10 jours.
+              Conception et développement du site Internet pour <b>Les Pépinières de Judicarré</b>,  entreprise spécialisée dans la culture de végétaux d'ornements. Le site est conçu comme une vitrine en ligne, permettant aux visiteurs de découvrir le vaste assortiment de produits de la pépinière. 
+                           </p>
+
+              <div className="w-5/6">
+                <div className="flex items-center">
+
+                <p className="mr-5 text-white font-bold text-xl">
+                Frontend:
               </p>
+              <a href="https://github.com/pbarozic/pepinieresdejudicarre" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-gray-300 hover:text-white mr-5" size={24} />
+                </a>
+              </div>
+              <div className="flex">
+
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                React </p>
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Next.js                        </p>
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Tailwind                        </p>
+       
+                </div>
+
+                </div>
+                
               <div className="w-5/6 justify-start items-center">
                 <div className="flex items-center">
               <p className="mr-5 text-white font-bold text-xl">
                 Backend:
               </p>
-              <a href="https://github.com/michaelrasolo/backend-gametime" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/pbarozic/pepinieresjudicarre-backend" target="_blank" rel="noopener noreferrer">
                   <FaGithub className="text-gray-300 hover:text-white mr-5" size={24} />
                 </a>
                 </div>
@@ -355,6 +378,59 @@ bg-teal-50
              
                 </div>
                 </div>
+
+                
+
+            </div>
+            <div className="lg:w-1/2 h-fit	 flex flex-col justify-start items-center pb-3 mt-4 pr-4">
+            <div className="flex h-full w-full items-center justify-center">
+            <div className="flex h-full w-3/4 relative">
+            <Image src="/images/screen-pepi-ordi.png"
+                  alt="screen pepiniere ordi"
+                  width={400}
+                  height={400}                   />
+             
+           </div>
+           <div className="flex h-full w-1/4">
+
+           <Image src="/images/capture-pepi-phone.png"
+                  alt="screen pepiniere telephone"
+                  objectFit='contain'
+                  width={200}
+                  height={400}                />
+                           </div>
+                           </div>
+           <div className='h-1/6 w-full flex items-center justify-center'>
+                <a
+                  href="https://www.pepinieresdejudicarre.com/"
+                  target="_blank"
+                  className="bg-orange-400 hover:bg-amber-600 lg:h-1/2 h-2/3 w-1/4 text-white font-bold py-2 px-4 rounded-full flex items-center justify-center text-sm"
+                >
+                  Voir le site
+                </a>
+              </div>
+           </div>
+
+           </div>
+
+
+
+          <div className="group h-fit w-5/6 flex lg:flex-row flex-col bg-teal-900 rounded-2xl hover:bg-teal-800 mb-5">
+            <div className="lg:w-1/2 h-full flex flex-col justify-start items-center pb-3">
+              <div className="overflow-hidden">
+                <Image src="/images/logo-gametime.png"
+                  alt="Photo logo appli"
+                  objectFit="contain"
+                  width={150}
+                  height={150}
+                />
+              </div>
+
+              <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3 lg:px-0 px-4">
+                Application Mobile permettant d'organiser des sessions de Basket sur des terrains publics partout en France.
+                Ce projet a été développé dans le cadre de ma formation à La Capsule (Bootcamp de 3 mois), en collaboration avec 3 autres développeurs afin de livrer un Minimum Viable Product (MVP) en 10 jours.
+              </p>
+              
                 <div className="w-5/6 justify-start items-center">
                 <div className="flex items-center">
 
@@ -377,39 +453,59 @@ bg-teal-50
                 </div>
 
                 </div>
-
-            </div>
-            <div className="lg:w-1/2 h-full flex flex-col pb-3 items-center">
+                <div className="w-5/6 justify-start items-center">
+                <div className="flex items-center">
+              <p className="mr-5 text-white font-bold text-xl">
+                Backend:
+              </p>
+              <a href="https://github.com/michaelrasolo/backend-gametime" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-gray-300 hover:text-white mr-5" size={24} />
+                </a>
+                </div>
               <div className="flex">
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Node.js                            </p>
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                Express                          </p>
+              <p className="bg-orange-400 hover:bg-amber-300 text-white font-bold h-6 py-2 px-4 rounded-full mr-2 flex flex-col justify-center text-center text-xs my-2">
+                MongoDB                         </p>
+             
+                </div>
+                </div>
+            </div>
+            
+            <div className="lg:w-1/2 w-full h-screen flex flex-col items-center mb-4">
+              <div className="flex h-5/6 w-full">
+              <div className="w-1/3 h-full relative">
                 <Image src="/images/screen search.png"
                   alt="screen appli search"
                   objectFit="contain"
-
-                  width={900}
-                  height={1800}
+                  layout="fill"
                 />
-
+                </div>
+                <div className="w-1/3 h-full relative">
                 <Image src="/images/screen map.png"
                   alt="screen appli map"
                   objectFit="contain"
 
-                  width={900}
-                  height={1800}
+                  layout="fill"
                 />
-
+                </div>
+                <div className="w-1/3 h-full relative">
                 <Image src="/images/screen chat.png"
-                  alt="screen appli chat"
+                  alt="screen appli search"
                   objectFit="contain"
 
-                  width={900}
-                  height={1800}
+                  layout="fill"
                 />
+                </div>
+          
               </div>
-              <div>
+              <div className='h-1/6 w-full flex items-center justify-center'>
                 <a
                   href="https://drive.google.com/file/d/1LtxMaIspYyy1IxkUKa4b7Xka9DObgOIy/view?usp=sharing"
                   target="_blank"
-                  className="bg-orange-400 hover:bg-amber-600 w-1/4 justify-self-center text-white font-bold mt-5 py-2 px-4 rounded-full mr-2 text-center lg:text-base text-sm mb-2"
+                  className="bg-orange-400 hover:bg-amber-600 lg:h-1/2 h-2/3 w-1/4 text-white font-bold py-2 px-4 rounded-full flex items-center justify-center text-sm"
                 >
                   Voir la démo
                 </a>
@@ -418,6 +514,9 @@ bg-teal-50
             </div>
 
           </div>
+
+
+     
 
         </section>
       </main>

@@ -8,7 +8,7 @@ function Experience(props) {
                 <h1 className="group-hover:font-bold text-sm text-white p-2">{props.date}</h1>
             </div>
 
-            <div className="group h-5/6 lg:max-w-lg flex bg-teal-900 cursor-pointer rounded-2xl hover:bg-teal-800 mb-5 p-3">
+            <div className="group h-5/6 w-full flex bg-teal-900 cursor-pointer rounded-2xl hover:bg-teal-800 mb-5 p-3">
                 <div className="w-full h-full flex flex-col justify-between">
              
                     <div>
