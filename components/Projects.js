@@ -27,7 +27,7 @@ function Project(props) {
           />
         </div>
 
-        <p className="text-base  lg:w-10/12  font-medium text-justify text-white mb-3 lg:px-0 px-4">
+        <p className="text-base lg:w-10/12 font-medium text-justify text-white mb-3 lg:px-0 px-4">
           {description}
         </p>
 
@@ -81,7 +81,7 @@ function Project(props) {
             <div
               key={index}
               className={`flex h-full w-${
-                images.length === 3 ? "1/3" : index === 0 ? "3/4" : "1/3"
+                images.length === 3 ? "1/3" : index === 0 ? "5/6" : "1/3"
               } relative`}
             >
               <Image
